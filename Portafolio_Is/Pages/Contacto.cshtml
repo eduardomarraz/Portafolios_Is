@@ -1,0 +1,38 @@
+@page
+@model ContactoModel
+@{ViewData["Title"] = "Create";}
+<h3 class="display-6">Se puede contactar conmigo:</h3>
+   <h5>Por Whatsapp: 649 77 07 26</h5>
+   <h5>En LinkedIn: www.linkedin.com/in/eduard
+o-martinez-ramirez</h5>
+   <h5>En GitHub: https://github.com/eduardomarraz </h5>
+   <h6>o rellenando este formulario (respondo en &lt;24 h):</h6>
+   @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Contactos.Nombre" class="control-label"></label>
+                <input asp-for="Contactos.Nombre" class="form-control" />
+                <span asp-validation-for="Contactos.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contactos.Correo" class="control-label"></label>
+                <input asp-for="Contactos.Correo" class="form-control" />
+                <span asp-validation-for="Contactos.Correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contactos.Mensaje" class="control-label"></label>
+                <input asp-for="Contactos.Mensaje" class="form-control" />
+                <span asp-validation-for="Contactos.Mensaje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div><a asp-page="Index">Volver al inicio</a></div>
+

@@ -1,0 +1,42 @@
+@page
+@model R_CV.Pages_Baaecdeaaabe.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Contactos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Contactos.Id" />
+            <div class="form-group">
+                <label asp-for="Contactos.Nombre" class="control-label"></label>
+                <input asp-for="Contactos.Nombre" class="form-control" />
+                <span asp-validation-for="Contactos.Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contactos.Correo" class="control-label"></label>
+                <input asp-for="Contactos.Correo" class="form-control" />
+                <span asp-validation-for="Contactos.Correo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contactos.Mensaje" class="control-label"></label>
+                <input asp-for="Contactos.Mensaje" class="form-control" />
+                <span asp-validation-for="Contactos.Mensaje" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
